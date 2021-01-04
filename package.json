@@ -1,0 +1,16 @@
+{
+    "name": "calculadora-santi",
+    "version": "1.0.0",
+    "description": "Calculadora sencilla que funciona como una de iPhone (sin las funciones: +/- y porcentaje). Para su elaboración se utilizó el modelo propuesto por Zell Liew (2018) en el tutorial: (https://www.freecodecamp.org/news/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98/)",
+    "main": "script.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "calculadora on-line",
+      " freeCodeCamp",
+      "JavaScript"
+    ],
+    "author": "Luis López-Méndez",
+    "license": "ninguna (dominio publico)"
+  }

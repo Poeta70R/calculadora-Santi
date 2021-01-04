@@ -1,0 +1,212 @@
+
+html {
+  box-sizing: border-box;
+}
+/* Reset CSS : su propósito es el de minimizar las múltiples diferencias visuales que se dan a la hora de mostrar una misma página web en diferentes navegadores, debido a que cada navegador implementa su propia hoja de estilos interna, con determinados valores por defecto, que no siempre siguen la recomendación de la organización W3C. (Fuente: Wikipedia)
+La técnica llamada Reset CSS propone reducir las inconsistencias de estilos entre los navegadores eliminando todos los estilos por defecto. */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+/* Responsividad de imagenes */
+
+embed,
+iframe,
+img,
+object,
+video {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+  margin: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+button {
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  outline: none;
+  appearance: none;
+  text-align: left;
+}
+
+input:hover,
+input:active,
+input:focus,
+textarea:hover,
+textarea:active,
+textarea:focus,
+button:hover,
+button:active,
+button:focus {
+  outline: none;
+}
+
+:root {
+  font-family: "Verdana", Arial, sans-serif;
+}
+
+/*--------------------------------------------------------------------------------- */
+
+html {
+  font-size: 175%;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  background-color: #ebbaba;
+  height: 700px;
+  text-align: center;
+}
+
+header {
+  border-bottom: 15px ridge lightblue;
+  display: block;
+  text-align: center;
+  width: 100vw;
+  height: 10vh;
+  color: #21810d;
+  position: sticky;
+  z-index: 5;
+}
+
+.header-text1 {
+  font-size: 42px;
+  line-height: 0em;
+  margin: 35px;
+}
+
+.header-text2 {
+  font-size: 24px;
+  line-height: 0em;
+  color: grey;
+}
+
+.contenedor {
+  display: flex;
+  height: 85vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor > p {
+  text-align: center;
+}
+
+.calculadora {
+  border-radius: 10px;
+  box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 15em;
+  overflow: hidden;
+  font-family: "Helvetica", sans-serif;
+  border: 5px solid #0cecec; /* borde calculadora */
+  z-index: 1;
+}
+
+.pantalla {
+  width: 350px;
+  background-color: #D3D3D3; /* color pantalla */
+  color: #696969; /* color numero en pantalla */
+  font-size: 30px;
+  padding: 10px 30px;
+  text-align: right;
+  border: 5px solid #8b8b8f; /* borde de la pantalla */
+
+}
+
+.teclado {
+  background-color: #0cecec; /* color del teclado */
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.teclado > * {
+  background-color: #FFA500; /* color teclas numeros */
+  border-radius: 4px;
+  padding: 15px 10px;
+  position: relative;
+  text-align: center;
+}
+
+.teclado > *:active::before,
+.teclado > .pulsado::before {
+  background-color: #faea0a;
+  bottom: 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
+  content: "";
+  left: 0;
+  opacity: 0.7;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.operador {
+  background-color: #f5efb9; /* color teclas operaciones */
+}
+
+.key--equal {
+  background-color: #00ff95; /* color tecla igual */
+  grid-column: -2;
+  grid-row: 2 / span 4;
+}
+
+.AC--button {
+  background-color: #eff0d9; /* color tecla borrar */
+}
